@@ -1,8 +1,6 @@
-import Redis from "ioredis"
-import dotenv from "dotenv"
+import Redis from "ioredis";
+import dotenv from "dotenv";
 
-dotenv.config();  //allows us to use .env
+dotenv.config();
 
-const redis = new Redis(process.env.UPSTASH_REDIS_URL);
-//key is foo, value is bar
-await redis.set('foo', 'bar');
+export const redis = new Redis(process.env.UPSTASH_REDIS_URL);
